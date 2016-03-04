@@ -69,10 +69,16 @@
   tags:
     - deploy
 
-- name: Enable and restart app service
+- name: Enable app service
   service:
     name=devops
     enabled=yes
+  tags:
+    - deploy
+
+- name: Restart app service
+  service:
+    name=devops
     state=restarted
     sleep=3
   become_user: devops
