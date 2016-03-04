@@ -75,6 +75,7 @@
     enabled=yes
     state=restarted
     sleep=3
+  become_user: devops
   tags:
     - deploy
 
