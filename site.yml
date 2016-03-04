@@ -6,11 +6,12 @@
     - postgresql
 
 - hosts: appservers
-  gather_facts: False
+  serial: 1
   roles:
     - common
     - java
     - users
+    - app
 
 - hosts: proxies
   gather_facts: False

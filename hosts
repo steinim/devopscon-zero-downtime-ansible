@@ -6,5 +6,9 @@ db.local
 app1.local
 app2.local
 
+[appservers:vars]
+http_port=1234
+dbserver=db.local
+
 [proxies]
 proxy.local

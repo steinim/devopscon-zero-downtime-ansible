@@ -1,1 +1,7 @@
 ---
+db:
+  name: devops
+  user: devops
+  schema: devops
+  password: devops123
+  table_name: HELLO
