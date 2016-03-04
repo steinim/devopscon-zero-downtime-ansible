@@ -9,6 +9,7 @@
   roles:
     - common
     - java
+    - users
 
 - hosts: proxies
   gather_facts: False
