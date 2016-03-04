@@ -3,6 +3,7 @@
   gather_facts: False
   roles:
     - common
+    - postgresql
 
 - hosts: appservers
   gather_facts: False
