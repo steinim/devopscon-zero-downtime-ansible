@@ -1,4 +1,5 @@
 ---
+
 - hosts: dbservers
   gather_facts: False
   roles:
@@ -16,6 +17,9 @@
 
 - hosts: proxies
   gather_facts: False
+  vars:
+    - app_port: "1234"
   roles:
     - common
+    - nginx
 
