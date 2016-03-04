@@ -30,8 +30,21 @@
   tags:
     - deploy
 
-- name: Link to previous app releases
-  shell: "ln -nsf $( readlink /home/{{ user }}/current ) /home/{{ user }}/previous"
+- name: check if existing app release exists
+  stat: path="/home/{{ user }}/current"
+  register: check_previous
+  tags:
+    - deploy
+
+- name: set current app release to previous
+  file:
+    dest="/home/{{ user }}/previous"
+    src="{{ check_previous.stat.lnk_source }}"
+    owner={{ user }}
+    group={{ group }}
+    state=link
+    force=yes
+  when: check_previous.stat is defined and check_previous.stat.islnk
   tags:
     - deploy
 
@@ -62,14 +75,12 @@
     enabled=yes
     state=restarted
     sleep=3
-  remote_user: devops
-  sudo: False
   tags:
     - deploy
 
 - name: Wait until app is available
   local_action: wait_for port={{ http_port }} host={{ inventory_hostname }} delay=5
-  sudo: False
+  become: no
   tags:
     - deploy
     - status
