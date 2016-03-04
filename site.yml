@@ -1,18 +1,15 @@
 ---
 - hosts: dbservers
-  gather_facts: False
   roles:
     - common
 
 - hosts: appservers
-  gather_facts: False
   roles:
     - common
     - java
-    - users
+    - <insert role here>
 
 - hosts: proxies
-  gather_facts: False
   roles:
     - common
 
