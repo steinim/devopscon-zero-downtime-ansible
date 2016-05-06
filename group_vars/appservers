@@ -1,4 +1,4 @@
 ---
-user: devops
-group: devops
-user_name: "Devops app user"
+user: <username>
+group: <groupname>
+user_name: "<comment>"

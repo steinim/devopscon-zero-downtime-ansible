@@ -22,7 +22,7 @@
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-servlet</artifactId>
-			<version>9.2.5.v20141112</version>
+			<version>9.3.8.v20160314</version>
 		</dependency>
 		<dependency>
 			<groupId>org.postgresql</groupId>
