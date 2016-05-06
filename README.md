@@ -1,6 +1,6 @@
 Intro
 ======
-This is the starting point for a session held at [DevOpsCon Berlin 2016](http://devopsconference.de).
+This is the starting point for a talk I gave at [DevOpsCon Berlin 2016](http://devopsconference.de).
 
 * [Abstract](http://devopsconference.de/session/zero-downtime-deployment-with-ansible/)
 * [Tutorial slides](http://steinim.github.io/slides/devopscon/zero-downtime-ansible)
